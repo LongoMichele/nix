@@ -3,6 +3,7 @@
   imports = [
     ./sh.nix
     ./kitty.nix
+    ./waybar/waybar.nix
     ./hyprland.nix
   ];
 
@@ -15,6 +16,8 @@
       rofi-wayland
       google-chrome
       vscode.fhs
+
+      font-awesome
     ];
   };
 

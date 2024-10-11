@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, userSettings, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -77,7 +77,7 @@
         builtins.concatLists (builtins.genList (i: [
           "$mod, ${toString (i + 1)}, workspace, ${toString (i + 1)}"
           "$mod SHIFT, ${toString (i + 1)}, movetoworkspace, ${toString (i + 1)}"
-        ]) 9)
+        ]) userSettings.hyprland.minWorkspaces)
       );
 
       bindm = [

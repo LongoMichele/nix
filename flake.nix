@@ -24,6 +24,9 @@
       username = "michele";
       description = "Michele Longo";
       home = "/home/${username}";
+      hyprland = {
+        minWorkspaces = 5;
+      };
     };
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
