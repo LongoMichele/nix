@@ -2,6 +2,7 @@
 {
   imports = [
     ./sh.nix
+    ./kitty.nix
     ./hyprland.nix
   ];
 

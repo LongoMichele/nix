@@ -57,10 +57,13 @@
       };
 
       "$mod" = "SUPER";
+      "$terminal" = "kitty";
       bind = [
         "CTRL, Space, exec, rofi -show run"
         "CTRL, q, killactive"
         "CTRL SHIFT, q, exit"
+
+        "ALT, t, exec, $terminal"
 
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
