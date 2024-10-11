@@ -14,7 +14,7 @@
         resize_on_border = true;
         layout = "dwindle";
         "col.active_border" = "rgba(468484ee) rgba(64a49dee) 45deg";
-        "col.inactive_border" = "rgba(64a49daa)";
+        "col.inactive_border" = "rgba(64a49d99)";
       };
 
       dwindle = {
@@ -54,6 +54,7 @@
         workspace_swipe_fingers = 3;
         workspace_swipe_touch = true;
         workspace_swipe_distance = 500;
+        workspace_swipe_invert = false;
       };
 
       "$mod" = "SUPER";
