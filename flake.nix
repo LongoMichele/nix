@@ -14,6 +14,10 @@
     systemSettings = {
       hostname = "fly";
       system = "x86_64-linux";
+      openssh = {
+        enable = false;
+        port = 22;
+      };
     };
     system = systemSettings.hostname;
     userSettings = rec {
