@@ -16,8 +16,6 @@
       rofi-wayland
       google-chrome
       vscode.fhs
-
-      font-awesome
     ];
   };
 

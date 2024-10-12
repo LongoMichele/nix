@@ -2,6 +2,7 @@
 let
   styles = builtins.readFile ./style.css;
 in {
+  home.packages = with pkgs; [ waybar font-awesome ];
   programs.waybar = {
     enable = true;
     settings = {
