@@ -59,6 +59,7 @@
     wget
     git
     kitty
+    brightnessctl
   ];
 
   services.openssh = {

@@ -30,7 +30,13 @@
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
+
+        blur = {
+          enabled = true;
+        };
       };
+
+      windowrule = "noblur, ^(?!kitty$).*";
 
       bezier = [  "myBezier, 0.05, 0.9, 0.1, 1.05"  ];
       animations = {
@@ -79,6 +85,11 @@
           "$mod SHIFT, ${toString (i + 1)}, movetoworkspace, ${toString (i + 1)}"
         ]) userSettings.hyprland.minWorkspaces)
       );
+
+      bindel = [
+        ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+      ];
 
       bindm = [
         "$mod, mouse:272, movewindow"
