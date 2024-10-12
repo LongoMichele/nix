@@ -17,6 +17,12 @@
       google-chrome
       vscode.fhs
     ];
+
+    pointerCursor = {
+      gtk.enable = true;
+      package = pkgs.vanilla-dmz;
+      name = "Vanilla-DMZ";
+    };
   };
 
   programs.home-manager.enable = true;

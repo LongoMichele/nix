@@ -19,7 +19,6 @@
         port = 22;
       };
     };
-    system = systemSettings.hostname;
     userSettings = rec {
       username = "michele";
       description = "Michele Longo";
@@ -32,7 +31,7 @@
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
   in {
     nixosConfigurations.${systemSettings.hostname} = lib.nixosSystem {
-      inherit system;
+      system = systemSettings.system;
       modules = [ ./system/configuration.nix ];
       specialArgs = {
         inherit systemSettings;
