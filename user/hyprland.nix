@@ -7,6 +7,10 @@
     settings = {
       monitor = ",preferred,auto,1.00";
 
+      exec-once = [
+        "waybar &"
+      ];
+
       general = {
         gaps_in = 5;
         gaps_out = 10;
