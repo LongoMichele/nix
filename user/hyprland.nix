@@ -82,6 +82,9 @@
         "$mod, down, movefocus, d"
         "$mod, Space, togglefloating"
         "$mod, J, togglesplit"
+
+        "$mod, S, togglespecialworkspace, magic"
+        "$mod SHIFT, S, movetoworkspace, special:magic"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i: [

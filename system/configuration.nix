@@ -12,6 +12,16 @@
     efi.canTouchEfiVariables = true;
   };
 
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+    pulse.enable = true;
+  };
+
   programs.hyprland.enable = true;
   networking.hostName = systemSettings.hostname; 
   networking.networkmanager.enable = true;
@@ -63,6 +73,8 @@
     git
     kitty
     brightnessctl
+
+    alsa-utils
   ];
 
   services.openssh = {
