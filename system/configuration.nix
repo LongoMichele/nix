@@ -73,7 +73,6 @@
     git
     kitty
     brightnessctl
-
     alsa-utils
   ];
 

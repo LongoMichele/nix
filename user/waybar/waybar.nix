@@ -16,7 +16,7 @@ in {
         ];
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
-        modules-right = [ "network" "pulseaudio" "battery" ];
+        modules-right = [ "network" "backlight" "pulseaudio" "battery" ];
 
         "hyprland/workspaces" = {
           persistent-workspaces = {
