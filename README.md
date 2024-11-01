@@ -37,4 +37,22 @@ This section includes the specific configurations for users.
 
 - **Player 🛠️ (WIP)**: the dedicated gaming user, set up for an optimal gaming experience.
 
+## ✅ To-Do Checklist
+
+Since I tend to forget things, here’s a list of tasks. Some might seem trivial, but I’m writing them down to avoid forgetting!
+
+- Configuration
+    - [x] Make sound work (and add controls keys)
+    - [x] Add brightness controls
+    - [ ] Add battery management
+    - [x] Update bootloader configuration
+- Customizations
+    - [ ] Update rofi theme
+    - [ ] Customize Waybar
+- Packages
+    - [ ] Make the installation of virt-manager optional
+    - [ ] Nvidia drivers (optional)
+    - [ ] Add custom background
+    - [ ] Add login manager
+
 ## 📝 Notes

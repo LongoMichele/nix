@@ -8,8 +8,18 @@
   ];
 
   boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+    systemd-boot.enable = false;
+
+    grub = {
+      enable = true;
+      device = "nodev";
+      useOSProber = true;
+      efiSupport = true;
+    };
+
+    efi = {
+      canTouchEfiVariables = true;
+    };
   };
 
   security.rtkit.enable = true;
