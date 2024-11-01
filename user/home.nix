@@ -3,6 +3,7 @@
   imports = [
     ./sh.nix
     ./kitty.nix
+    ./vscode.nix
     ./waybar/waybar.nix
     ./hyprland.nix
   ];
@@ -15,7 +16,6 @@
     packages = with pkgs; [
       rofi-wayland
       firefox
-      vscode.fhs
     ];
 
     pointerCursor = {
