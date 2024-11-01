@@ -14,7 +14,7 @@
     stateVersion = "24.05";
     packages = with pkgs; [
       rofi-wayland
-      google-chrome
+      firefox
       vscode.fhs
     ];
 

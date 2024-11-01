@@ -46,6 +46,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Add brightness controls
     - [ ] Add battery management
     - [x] Update bootloader configuration
+    - [ ] Add second user and host
 - Customizations
     - [ ] Update rofi theme
     - [ ] Customize Waybar
