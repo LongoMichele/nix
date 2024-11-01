@@ -5,6 +5,7 @@
 - [Installation](#⚙️-installation)
 - [Hosts](#🖥️-hosts)
 - [Users](#👤-users)
+- [To-Do Checklist](#✅-to-do-checklist)
 - [Notes](#📝-notes)
 
 ## ⚙️ Installation
