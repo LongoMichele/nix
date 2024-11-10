@@ -49,7 +49,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Update bootloader configuration
     - [ ] Add second user and host
     - [ ] Polkit setup
-    - [ ] Add login manager
+    - [x] Add login manager
     - [ ] Lock screen
 - Customizations
     - [ ] Update rofi theme
@@ -57,6 +57,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Complete VScode setup
     - [ ] Add powerlevel10k
     - [ ] Add customization object in flake
+    - [ ] Customize gdm
 - Packages
     - [ ] Make the installation of virt-manager optional
     - [ ] Nvidia drivers (optional)

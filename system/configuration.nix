@@ -22,17 +22,6 @@
     };
   };
 
-  hardware.pulseaudio.enable = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-    pulse.enable = true;
-  };
-
   fonts.packages = with pkgs; [
     fira-code
   ];
@@ -56,9 +45,31 @@
   };
 
   console.keyMap = "it";
-  services.xserver.xkb = {
-    layout = "it";
-    variant = "";
+
+  security.rtkit.enable = true;
+  services = {
+    pipewire = {
+      enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      pulse.enable = true;
+    };
+
+    xserver = {
+      enable = true;
+      displayManager.gdm.enable = true;
+      xkb = {
+        layout = "it";
+        variant = "";
+      };
+    };
+
+    openssh = {
+      enable = systemSettings.openssh.enable;
+      ports = [ systemSettings.openssh.port ];
+    };
   };
 
   environment.shells = with pkgs; [ bash zsh ];
@@ -90,11 +101,6 @@
     brightnessctl
     alsa-utils
   ];
-
-  services.openssh = {
-    enable = systemSettings.openssh.enable;
-    ports = [ systemSettings.openssh.port ];
-  };
 
   system.stateVersion = "24.05";
 }
