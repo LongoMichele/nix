@@ -28,6 +28,7 @@
         iconTheme = "material-icon-theme";
         colorTheme = "One Dark Pro Darker";
         sideBar.location = "right";
+        startupEditor = "none";
       };
 
       editor = {

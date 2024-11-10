@@ -52,11 +52,13 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Update rofi theme
     - [ ] Customize Waybar
     - [x] Complete VScode setup
+    - [ ] Add powerlevel10k
 - Packages
     - [ ] Make the installation of virt-manager optional
     - [ ] Nvidia drivers (optional)
     - [ ] Add custom background
     - [ ] Add login manager
     - [ ] Add NodeJS
+    - [ ] Lock screen
 
 ## 📝 Notes
