@@ -1,5 +1,13 @@
 { config, lib, pkgs, userSettings, ... }:
-{
+let
+  bg = "/home/michele/nix/assets/bg.JPG";
+in {
+  home = {
+    packages = with pkgs; [
+      swaybg
+    ];
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -9,6 +17,7 @@
 
       exec-once = [
         "waybar &"
+        "swaybg -i ${bg} &"
       ];
 
       general = {
@@ -66,6 +75,11 @@
         workspace_swipe_touch = true;
         workspace_swipe_distance = 500;
         workspace_swipe_invert = false;
+      };
+
+      misc = {
+        disable_splash_rendering = true;
+        disable_hyprland_logo = true;
       };
 
       "$mod" = "SUPER";

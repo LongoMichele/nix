@@ -48,17 +48,19 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Add battery management
     - [x] Update bootloader configuration
     - [ ] Add second user and host
+    - [ ] Polkit setup
+    - [ ] Add login manager
+    - [ ] Lock screen
 - Customizations
     - [ ] Update rofi theme
     - [ ] Customize Waybar
     - [x] Complete VScode setup
     - [ ] Add powerlevel10k
+    - [ ] Add customization object in flake
 - Packages
     - [ ] Make the installation of virt-manager optional
     - [ ] Nvidia drivers (optional)
-    - [ ] Add custom background
-    - [ ] Add login manager
+    - [x] Add custom background
     - [ ] Add NodeJS
-    - [ ] Lock screen
 
 ## 📝 Notes
