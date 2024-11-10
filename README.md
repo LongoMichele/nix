@@ -51,10 +51,12 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
 - Customizations
     - [ ] Update rofi theme
     - [ ] Customize Waybar
+    - [x] Complete VScode setup
 - Packages
     - [ ] Make the installation of virt-manager optional
     - [ ] Nvidia drivers (optional)
     - [ ] Add custom background
     - [ ] Add login manager
+    - [ ] Add NodeJS
 
 ## 📝 Notes

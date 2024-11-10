@@ -32,6 +32,10 @@
     pulse.enable = true;
   };
 
+  fonts.packages = with pkgs; [
+    fira-code
+  ];
+
   programs.hyprland.enable = true;
   networking.hostName = systemSettings.hostname; 
   networking.networkmanager.enable = true;
