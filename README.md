@@ -42,33 +42,50 @@ This section includes the specific configurations for users.
 
 Since I tend to forget things, here’s a list of tasks. Some might seem trivial, but I’m writing them down to avoid forgetting!
 
-- Configuration
-    - [x] Make sound work (and add controls keys)
-    - [ ] Add bluetooth control packages and UI tool
+- 🖥️ **System Setup**
+  - 🔊 **Audio & Display**
+    - [x] Make sound work (including control keys)
     - [x] Add brightness controls
+    - [ ] Add bluetooth control packages and UI tool
+  - 🔋 **Power Management**
     - [ ] Add battery management
+    - [ ] Add brightness and power management indicators to Waybar
+  - ⚙️ **Boot & User Accounts**
     - [x] Update bootloader configuration
-    - [ ] Add second user and host
+    - [ ] Add second user and configure host
+  - 🔒 **Security & Access**
     - [ ] Polkit setup
-    - [x] Add display manager
     - [ ] Lock screen
-- Customizations
+
+- 🎨 **Interface & Display**
+  - 🖼️ **Display Manager**
+    - [x] Install and configure display manager
+    - [ ] Add option to choose between GDM or SDDM
+    - [ ] Customize GDM
+    - [ ] Add option to choose SDDM theme
+  - 🎭 **Themes & Appearance**
+    - [x] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
     - [ ] Update rofi theme
     - [ ] Customize Waybar
-    - [x] Complete VScode setup
-    - [ ] Add powerlevel10k
-    - [ ] Add customization object in flake
-    - [ ] Customize gdm
-    - [x] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
     - [ ] Set system theme to dark
     - [ ] Change cursor theme and add missing icons
-    - [ ] Add option to choose GDM or SDDM as display manager
-    - [ ] Add option to choose SDDM theme
-- Packages
-    - [ ] Make the installation of virt-manager optional
-    - [ ] Nvidia drivers (optional)
-    - [x] Add custom background
-    - [ ] Add NodeJS
+
+- 🛠️ **Developer Tools & Environment**
+  - 📝 **Editor & Shell**
+    - [x] Complete VScode setup
     - [ ] Add NeoVim
+    - [ ] Add NodeJS
+    - [ ] Add powerlevel10k shell prompt theme
+  - 📦 **Optional Packages**
+    - [ ] Make installation of virt-manager optional
+    - [ ] Nvidia drivers (optional)
+
+- 🧩 **Configuration & Customization**
+  - 🏠 **Home Manager Customizations**
+    - [ ] Add customization object in flake for easy theme and package management
+    - [ ] Set up options for display manager and theme selection
+  - 🌄 **Background & Visuals**
+    - [x] Add custom background
+
 
 ## 📝 Notes
