@@ -67,7 +67,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
     - [ ] Update rofi theme
     - [ ] Customize Waybar
-    - [ ] Set system theme to dark
+    - [x] Set system theme to dark
     - [ ] Change cursor theme and add missing icons
 
 - 🛠️ **Developer Tools & Environment**
