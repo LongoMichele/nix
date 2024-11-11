@@ -5,6 +5,7 @@
     ./kitty.nix
     ./vscode.nix
     ./waybar/waybar.nix
+    ./firefox.nix
     ./hyprland.nix
   ];
 
@@ -15,7 +16,6 @@
     stateVersion = "24.05";
     packages = with pkgs; [
       rofi-wayland
-      firefox
     ];
 
     pointerCursor = {
@@ -24,6 +24,5 @@
       name = "Vanilla-DMZ";
     };
   };
-
   programs.home-manager.enable = true;
 }

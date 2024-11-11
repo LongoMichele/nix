@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    textfox.url = "github:adriankarlen/textfox";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, textfox, ... }:
   let
     systemSettings = {
       hostname = "fly";
@@ -41,7 +42,10 @@
     };
     homeConfigurations.${userSettings.username} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      modules = [ ./user/home.nix ];
+      modules = [
+        ./user/home.nix
+        textfox.homeManagerModules.default
+      ];
       extraSpecialArgs = {
         inherit userSettings;
         inherit configurationRoot;

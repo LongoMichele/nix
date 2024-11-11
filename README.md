@@ -59,7 +59,9 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Add powerlevel10k
     - [ ] Add customization object in flake
     - [ ] Customize gdm
-    - [ ] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
+    - [x] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
+    - [ ] Set system theme to dark
+    - [ ] Change cursor theme and add missing icons
     - [ ] Add option to choose GDM or SDDM as display manager
     - [ ] Add option to choose SDDM theme
 - Packages
