@@ -50,7 +50,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Update bootloader configuration
     - [ ] Add second user and host
     - [ ] Polkit setup
-    - [x] Add login manager
+    - [x] Add display manager
     - [ ] Lock screen
 - Customizations
     - [ ] Update rofi theme
@@ -60,6 +60,8 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Add customization object in flake
     - [ ] Customize gdm
     - [ ] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
+    - [ ] Add option to choose GDM or SDDM as display manager
+    - [ ] Add option to choose SDDM theme
 - Packages
     - [ ] Make the installation of virt-manager optional
     - [ ] Nvidia drivers (optional)

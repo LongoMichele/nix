@@ -1,10 +1,10 @@
 { config, pkgs, systemSettings, userSettings, ... }:
-
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   imports = [
     ./hardware-configuration.nix
     ./virt-manager.nix
+    ./sddm/sddm.nix
   ];
 
   boot.loader = {
@@ -58,8 +58,6 @@
     };
 
     xserver = {
-      enable = true;
-      displayManager.gdm.enable = true;
       xkb = {
         layout = "it";
         variant = "";
