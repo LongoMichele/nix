@@ -1,6 +1,6 @@
-{ config, lib, pkgs, userSettings, ... }:
+{ config, lib, pkgs, userSettings, configurationRoot, ... }:
 let
-  bg = "/home/michele/nix/assets/bg.JPG";
+  bg = "${configurationRoot}/assets/bg.jpg";
 in {
   home = {
     packages = with pkgs; [

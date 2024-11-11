@@ -44,6 +44,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
 
 - Configuration
     - [x] Make sound work (and add controls keys)
+    - [ ] Add bluetooth control packages and UI tool
     - [x] Add brightness controls
     - [ ] Add battery management
     - [x] Update bootloader configuration
@@ -58,10 +59,12 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Add powerlevel10k
     - [ ] Add customization object in flake
     - [ ] Customize gdm
+    - [ ] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
 - Packages
     - [ ] Make the installation of virt-manager optional
     - [ ] Nvidia drivers (optional)
     - [x] Add custom background
     - [ ] Add NodeJS
+    - [ ] Add NeoVim
 
 ## 📝 Notes

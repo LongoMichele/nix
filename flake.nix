@@ -27,6 +27,7 @@
         minWorkspaces = 5;
       };
     };
+    configurationRoot = "${userSettings.home}/nix";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
   in {
@@ -43,6 +44,7 @@
       modules = [ ./user/home.nix ];
       extraSpecialArgs = {
         inherit userSettings;
+        inherit configurationRoot;
       };
     };
   };
