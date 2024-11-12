@@ -7,6 +7,7 @@
     ./waybar/waybar.nix
     ./firefox.nix
     ./hyprland.nix
+    ./git.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

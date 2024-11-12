@@ -22,6 +22,7 @@
     };
     userSettings = rec {
       username = "michele";
+      email = "michele.longo@domain.com";
       description = "Michele Longo";
       home = "/home/${username}";
       hyprland = {
