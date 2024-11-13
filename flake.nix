@@ -8,9 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     textfox.url = "github:adriankarlen/textfox";
+    nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, textfox, ... }:
+  outputs = { self, nixpkgs, home-manager, textfox, nix-colors, ... }:
   let
     systemSettings = {
       hostname = "fly";
@@ -32,6 +33,10 @@
     configurationRoot = "${userSettings.home}/nix";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
+    theme = {
+      backgroundImage = "${configurationRoot}/assets/bg.jpg";
+      colorScheme = nix-colors.colorSchemes.dracula;
+    };
   in {
     nixosConfigurations.${systemSettings.hostname} = lib.nixosSystem {
       system = systemSettings.system;
@@ -48,8 +53,7 @@
         textfox.homeManagerModules.default
       ];
       extraSpecialArgs = {
-        inherit userSettings;
-        inherit configurationRoot;
+        inherit userSettings configurationRoot theme;
       };
     };
   };

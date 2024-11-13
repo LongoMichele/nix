@@ -1,14 +1,12 @@
-{ config, lib, pkgs, userSettings, configurationRoot, ... }:
-let
-  bg = "${configurationRoot}/assets/bg.jpg";
-in {
+{ config, lib, pkgs, userSettings, theme, ... }:
+{
   home = {
     packages = with pkgs; [
       swaybg
     ];
   };
 
-  wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = with theme.colorScheme; {
     enable = true;
     xwayland.enable = true;
 
@@ -17,7 +15,7 @@ in {
 
       exec-once = [
         "waybar &"
-        "swaybg -i ${bg} &"
+        "swaybg -i ${theme.backgroundImage} &"
       ];
 
       general = {
@@ -26,8 +24,8 @@ in {
         border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
-        "col.active_border" = "rgba(468484ee) rgba(64a49dee) 45deg";
-        "col.inactive_border" = "rgba(64a49d99)";
+        "col.active_border" = "rgba(${palette.base04}aa) rgba(${palette.base05}bb) 45deg";
+        "col.inactive_border" = "rgba(${palette.base03}bb)";
       };
 
       dwindle = {
@@ -42,7 +40,7 @@ in {
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        "col.shadow" = "rgba(${palette.base00}ee)";
 
         blur = {
           enabled = true;
@@ -85,7 +83,7 @@ in {
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       bind = [
-        "CTRL, Space, exec, rofi -show run"
+        "CTRL, Space, exec, rofi -show drun"
         "CTRL, q, killactive"
         "CTRL SHIFT, q, exit"
 
