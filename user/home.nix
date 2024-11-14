@@ -8,6 +8,7 @@
     ./firefox.nix
     ./hyprland.nix
     ./git.nix
+    ./rofi.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -15,9 +16,6 @@
     username = userSettings.username;
     homeDirectory = userSettings.home;
     stateVersion = "24.05";
-    packages = with pkgs; [
-      rofi-wayland
-    ];
 
     pointerCursor = {
       gtk.enable = true;

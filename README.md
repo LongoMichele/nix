@@ -65,7 +65,8 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Add option to choose SDDM theme
   - 🎭 **Themes & Appearance**
     - [x] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
-    - [ ] Update rofi theme
+    - [x] Update rofi theme
+    - [ ] Change from rofi theme file to config
     - [ ] Customize Waybar
     - [x] Set system theme to dark
     - [ ] Change cursor theme and add missing icons
