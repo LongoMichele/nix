@@ -9,15 +9,11 @@
     ./hyprland.nix
     ./git.nix
     ./rofi.nix
+    ./node.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
   home = {
-    packages = with pkgs; [
-      nodejs_22
-      nodePackages_latest."@shopify/cli"
-    ];
-
     username = userSettings.username;
     homeDirectory = userSettings.home;
     stateVersion = "24.05";
