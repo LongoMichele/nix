@@ -66,16 +66,16 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
   - 🎭 **Themes & Appearance**
     - [x] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
     - [x] Update rofi theme
-    - [ ] Change from rofi theme file to config
+    - [x] Change from rofi theme file to config
     - [ ] Customize Waybar
     - [x] Set system theme to dark
-    - [ ] Change cursor theme and add missing icons
+    - [x] Change cursor theme and add missing icons
 
 - 🛠️ **Developer Tools & Environment**
   - 📝 **Editor & Shell**
     - [x] Complete VScode setup
     - [ ] Add NeoVim
-    - [ ] Add NodeJS
+    - [x] Add NodeJS
     - [ ] Add powerlevel10k shell prompt theme
   - 📦 **Optional Packages**
     - [ ] Make installation of virt-manager optional
@@ -90,3 +90,5 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
 
 
 ## 📝 Notes
+
+- **VS Code Extensions**: Extensions are automatically installed during the `home-manager` build process. They are sourced from `pkgs.vscode-extensions`. For extensions not available in that repository, the `mutableExtensionsDir` option is enabled, allowing manual installation when needed.
