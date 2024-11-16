@@ -5,7 +5,7 @@
     package = pkgs.vscode.fhs;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = true;
 
     extensions = (with pkgs.vscode-extensions; [
       pkief.material-icon-theme
@@ -15,12 +15,20 @@
       eamodio.gitlens
       alefragnani.project-manager
       aaron-bond.better-comments
-      # exodiusstudios.comment-anchors
       editorconfig.editorconfig
       usernamehw.errorlens
       dbaeumer.vscode-eslint
       esbenp.prettier-vscode
+
+      # ========== Manual installation Required ============ #
+      # The following extensions are not in pkgs.X
+      # They will need to be installed manually
+      # ==================================================== #
+      # exodiusstudios.comment-anchors
       # rvest.vs-code-prettier-eslint
+      # killalau.vscode-liquid-snippets
+      # shopify.theme-check-vscode
+      # sissel.shopify-liquid
     ]);
 
     userSettings = {
