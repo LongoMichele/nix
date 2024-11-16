@@ -14,6 +14,7 @@ let
     gcheck = "git checkout";
     gadd = "git add .";
     gcommit = "git commit";
+    gmerge = "git merge";
     gpush = "git push";
     gmaster = "git checkout master";
     gmain = "git checkout main";
