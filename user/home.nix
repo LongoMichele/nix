@@ -1,7 +1,7 @@
 { config, lib, pkgs, userSettings, ... }:
 {
   imports = [
-    ./sh.nix
+    ./shell.nix
     ./kitty.nix
     ./vscode.nix
     ./waybar/waybar.nix
