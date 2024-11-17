@@ -32,6 +32,8 @@
     ]);
 
     userSettings = {
+      "git.autofetch" = true;
+   
       workbench = {
         iconTheme = "material-icon-theme";
         colorTheme = "One Dark Pro Darker";
@@ -45,6 +47,11 @@
         renderWhitespace = "all";
         fontFamily = "Fira Code";
         fontLigatures = true;
+        formatOnSave = true;
+      };
+
+      "[liquid]" = {
+        "editor.defaultFormatter" = "Shopify.theme-check-vscode";
       };
     };
 
@@ -67,6 +74,11 @@
         key = "ctrl+7";
         command = "editor.action.commentLine";
         when = "editorTextFocus && !editorReadonly";
+      }
+      {
+        key = "shift+alt+f";
+        command = "editor.action.formatDocument";
+        when = "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor";
       }
     ];
   };
