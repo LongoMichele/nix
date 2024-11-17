@@ -19,6 +19,11 @@ let
     gmaster = "git checkout master";
     gmain = "git checkout main";
     gdev = "git checkout develop";
+
+    # Shopify
+    spull = "shopify theme pull";
+    spush = "shopify theme push";
+    sdev = "shopify theme dev";
   };
 in {
   programs.bash = {
