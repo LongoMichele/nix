@@ -53,6 +53,14 @@
       "[liquid]" = {
         "editor.defaultFormatter" = "Shopify.theme-check-vscode";
       };
+
+      "[css]" = {
+        "editor.defaultFormatter" = "rvest.vs-code-prettier-eslint";
+      };
+
+      "[javascript]" = {
+        "editor.defaultFormatter" = "rvest.vs-code-prettier-eslint";
+      };
     };
 
     keybindings = [
