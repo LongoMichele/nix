@@ -55,11 +55,11 @@
       };
 
       "[css]" = {
-        "editor.defaultFormatter" = "rvest.vs-code-prettier-eslint";
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
 
       "[javascript]" = {
-        "editor.defaultFormatter" = "rvest.vs-code-prettier-eslint";
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
       };
     };
 
