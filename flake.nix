@@ -33,8 +33,32 @@
     configurationRoot = "${userSettings.home}/nix";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
-    theme = {
+    theme = rec {
       backgroundImage = "${configurationRoot}/assets/bg.jpg";
+      colors = {
+        background = "#282C34";
+        foreground = "#ABB2BF";
+        cursor = "#528BFF";
+
+        red = "#E06C75";
+        orange = "#D19A66";
+        yellow = "#E5C07B";
+        green = "#98C379";
+        cyan = "#56B6C2";
+        blue = "#61AFEF";
+        purple = "#C678DD";
+
+        dark-gray = "#3E4451";
+        light-gray = "#5C6370";
+        selection = "#3E4451";
+        comment = "#5C6370";
+      };
+      aliases = {
+        lightbg = "${colors.dark-gray}";
+        lightfg = "${colors.foreground}";
+        border = "${colors.foreground}";
+        accent = "${colors.blue}";
+      };
       colorScheme = nix-colors.colorSchemes.dracula;
     };
   in {

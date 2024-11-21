@@ -1,12 +1,14 @@
 { config, lib, pkgs, userSettings, theme, ... }:
-{
+let
+  removeHash = hex: lib.strings.removePrefix "#" hex;
+in {
   home = {
     packages = with pkgs; [
       swaybg
     ];
   };
 
-  wayland.windowManager.hyprland = with theme.colorScheme; {
+  wayland.windowManager.hyprland = with theme; {
     enable = true;
     xwayland.enable = true;
 
@@ -15,7 +17,7 @@
 
       exec-once = [
         "waybar &"
-        "swaybg -i ${theme.backgroundImage} &"
+        "swaybg -i ${backgroundImage} &"
       ];
 
       general = {
@@ -24,8 +26,8 @@
         border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
-        "col.active_border" = "rgba(${palette.base04}aa) rgba(${palette.base05}bb) 45deg";
-        "col.inactive_border" = "rgba(${palette.base03}bb)";
+        "col.active_border" = "rgba(${removeHash colors.dark-gray}aa) rgba(${removeHash colors.foreground}bb) 45deg";
+        "col.inactive_border" = "rgba(${removeHash colors.dark-gray}bb)";
       };
 
       dwindle = {
@@ -40,7 +42,7 @@
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(${palette.base00}ee)";
+        "col.shadow" = "rgba(${removeHash colors.background}ee)";
 
         blur = {
           enabled = true;

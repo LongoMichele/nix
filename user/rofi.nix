@@ -1,32 +1,32 @@
 { config, pkgs, theme, ... }:
 let
   inherit (config.lib.formats.rasi) mkLiteral;
-  rofi-theme = with theme.colorScheme.palette; {
+  rofi-theme = with theme; {
     "*" = {
-      red = mkLiteral "rgba(220, 50, 47, 100%)";
+      red = mkLiteral "${theme.colors.red}";
       selected-active-foreground = mkLiteral "@background";
-      lightfg = mkLiteral "rgba(88, 104, 117, 100%)";
+      lightfg = mkLiteral "${theme.aliases.lightfg}";
       separatorcolor = mkLiteral "@foreground";
       urgent-foreground = mkLiteral "@red";
       alternate-urgent-background = mkLiteral "@lightbg";
-      lightbg = mkLiteral "rgba(238, 232, 213, 100%)";
+      lightbg = mkLiteral "${theme.aliases.lightbg}";
       background-color = mkLiteral "transparent";
       border-color = mkLiteral "@foreground";
       normal-background = mkLiteral "@background";
       selected-urgent-background = mkLiteral "@red";
       alternate-active-background = mkLiteral "@lightbg";
       spacing = mkLiteral "2";
-      blue = mkLiteral "rgba(38, 139, 210, 100%)";
+      blue = mkLiteral "${theme.colors.blue}";
       alternate-normal-foreground = mkLiteral "@foreground";
       urgent-background = mkLiteral "@background";
       selected-normal-foreground = mkLiteral "@lightbg";
       active-foreground = mkLiteral "@blue";
-      background = mkLiteral "rgba(253, 246, 227, 100%)";
+      background = mkLiteral "${theme.colors.background}";
       selected-active-background = mkLiteral "@blue";
       active-background = mkLiteral "@background";
       selected-normal-background = mkLiteral "@lightfg";
       alternate-normal-background = mkLiteral "@lightbg";
-      foreground = mkLiteral "rgba(0, 43, 54, 100%)";
+      foreground = mkLiteral "${theme.colors.foreground}";
       selected-urgent-foreground = mkLiteral "@background";
       normal-foreground = mkLiteral "@foreground";
       alternate-urgent-foreground = mkLiteral "@red";

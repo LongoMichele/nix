@@ -10,7 +10,7 @@
     extensions = (with pkgs.vscode-extensions; [
       pkief.material-icon-theme
       mhutchie.git-graph
-      jnoortheen.nix-ide
+      bbenoist.nix
       zhuangtongfa.material-theme
       eamodio.gitlens
       alefragnani.project-manager
