@@ -84,12 +84,14 @@ in {
 
       "$mod" = "SUPER";
       "$terminal" = "kitty";
+      "$lock" = "hyprlock";
       bind = [
         "CTRL, Space, exec, rofi -show drun"
         "CTRL, q, killactive"
         "CTRL SHIFT, q, exit"
 
         "ALT, t, exec, $terminal"
+        "$mod, l, exec, $lock"
 
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
@@ -120,6 +122,80 @@ in {
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizeindow"
+      ];
+    };
+  };
+
+  programs.hyprlock = with theme; {
+    enable = true;
+
+    settings = {
+      general = {
+        disable_loading_bar = true;
+        # grace = 300;
+        hide_cursor = true;
+        no_fade_in = false;
+      };
+
+      background = {
+        path = "screenshot";
+        blur_passes = 3;
+        blur_size = 2;
+      };
+
+      input-field = {
+        size = "300, 30";
+        outline_thickness = 0;
+        dots_size = "0.25";
+        dots_spacing = "0.55";
+        dots_center = true;
+        outer_color = "rgba(${removeHash aliases.border}ee)";
+        inner_color = "rgba(${removeHash colors.background}ff)";
+        font_color =  "rgba(${removeHash colors.foreground}ff)";
+        fade_on_empty = false;
+        hide_input = false;
+        check_color = "rgba(${removeHash aliases.accent}55)";
+        fail_color = "rgba(${removeHash colors.red}ff)";
+        fail_text = "$FAIL <b>($ATTEMPTS)</b>";
+        fail_transition = 300;
+        capslock_color = -1;
+        numlock_color = -1;
+        bothlock_color = -1;
+        invert_numlock = false;
+        swap_font_color = true;
+        position = "0, -330";
+        halign = "center";
+        valign = "center";
+      };
+
+      label = [
+        {
+          text = "cmd[update:1000] echo \"$(date +\"%A, %B %d\")\"";
+          color = "rgba(${removeHash colors.foreground}ff)";
+          font_size = 20;
+          font_family = "Iosevka Nerd Font Bold";
+          position = "0, 300";
+          halign = "center";
+          valign = "center";
+        }
+        {
+          text = "cmd[update:1000] echo \"$(date +\"%k:%M\")\"";
+          color = "rgba(${removeHash colors.foreground}ff)";
+          font_size = 90;
+          font_family = "Iosevka Nerd Font Extrabold";
+          position = "0, 350";
+          halign = "center";
+          valign = "center";
+        }
+        {
+          text = "$USER";
+          color = "rgba(${removeHash colors.foreground}ff)";
+          font_size = 15;
+          font_family = "SF Pro Display Bold";
+          position = "0, -300";
+          halign = "center";
+          valign = "center";
+        }
       ];
     };
   };

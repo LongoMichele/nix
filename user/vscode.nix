@@ -5,7 +5,7 @@
     package = pkgs.vscode.fhs;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    mutableExtensionsDir = true;
+    mutableExtensionsDir = false;
 
     extensions = (with pkgs.vscode-extensions; [
       pkief.material-icon-theme

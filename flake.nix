@@ -8,10 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     textfox.url = "github:adriankarlen/textfox";
-    nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { self, nixpkgs, home-manager, textfox, nix-colors, ... }:
+  outputs = { self, nixpkgs, home-manager, textfox, ... }:
   let
     systemSettings = {
       hostname = "fly";
@@ -59,7 +58,6 @@
         border = "${colors.foreground}";
         accent = "${colors.blue}";
       };
-      colorScheme = nix-colors.colorSchemes.dracula;
     };
   in {
     nixosConfigurations.${systemSettings.hostname} = lib.nixosSystem {

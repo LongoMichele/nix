@@ -43,6 +43,7 @@ This section includes the specific configurations for users.
 Since I tend to forget things, here’s a list of tasks. Some might seem trivial, but I’m writing them down to avoid forgetting!
 
 - 🖥️ **System Setup**
+
   - 🔊 **Audio & Display**
     - [x] Make sound work (including control keys)
     - [x] Add brightness controls
@@ -55,9 +56,10 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Add second user and configure host
   - 🔒 **Security & Access**
     - [ ] Polkit setup
-    - [ ] Lock screen
+    - [x] Lock screen
 
 - 🎨 **Interface & Display**
+
   - 🖼️ **Display Manager**
     - [x] Install and configure display manager
     - [ ] Add option to choose between GDM or SDDM
@@ -72,6 +74,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Change cursor theme and add missing icons
 
 - 🛠️ **Developer Tools & Environment**
+
   - 📝 **Editor & Shell**
     - [x] Complete VScode setup
     - [ ] Add NeoVim
@@ -83,11 +86,10 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
 
 - 🧩 **Configuration & Customization**
   - 🏠 **Home Manager Customizations**
-    - [ ] Add customization object in flake for easy theme and package management
+    - [x] Add customization object in flake for easy theme and package management
     - [ ] Set up options for display manager and theme selection
   - 🌄 **Background & Visuals**
     - [x] Add custom background
-
 
 ## 📝 Notes
 
