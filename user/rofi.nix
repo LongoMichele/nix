@@ -1,36 +1,10 @@
 { config, pkgs, theme, ... }:
 let
   inherit (config.lib.formats.rasi) mkLiteral;
-  rofi-theme = with theme; {
+  rofi-theme = with theme.colors; {
     "*" = {
-      red = mkLiteral "${theme.colors.red}";
-      selected-active-foreground = mkLiteral "@background";
-      lightfg = mkLiteral "${theme.aliases.lightfg}";
-      separatorcolor = mkLiteral "@foreground";
-      urgent-foreground = mkLiteral "@red";
-      alternate-urgent-background = mkLiteral "@lightbg";
-      lightbg = mkLiteral "${theme.aliases.lightbg}";
       background-color = mkLiteral "transparent";
-      border-color = mkLiteral "@foreground";
-      normal-background = mkLiteral "@background";
-      selected-urgent-background = mkLiteral "@red";
-      alternate-active-background = mkLiteral "@lightbg";
-      spacing = mkLiteral "2";
-      blue = mkLiteral "${theme.colors.blue}";
-      alternate-normal-foreground = mkLiteral "@foreground";
-      urgent-background = mkLiteral "@background";
-      selected-normal-foreground = mkLiteral "@lightbg";
-      active-foreground = mkLiteral "@blue";
-      background = mkLiteral "${theme.colors.background}";
-      selected-active-background = mkLiteral "@blue";
-      active-background = mkLiteral "@background";
-      selected-normal-background = mkLiteral "@lightfg";
-      alternate-normal-background = mkLiteral "@lightbg";
-      foreground = mkLiteral "${theme.colors.foreground}";
-      selected-urgent-foreground = mkLiteral "@background";
-      normal-foreground = mkLiteral "@foreground";
-      alternate-urgent-foreground = mkLiteral "@red";
-      alternate-active-foreground = mkLiteral "@blue";
+      border-color = mkLiteral accent."700";
     };
     "element" = {
       padding = mkLiteral "1px";
@@ -39,40 +13,40 @@ let
       border = mkLiteral "0";
     };
     "element normal.normal" = {
-      background-color = mkLiteral "@normal-background";
-      text-color = mkLiteral "@normal-foreground";
+      text-color = mkLiteral background."900";
+      background-color = mkLiteral foreground."900";
     };
     "element normal.urgent" = {
-      background-color = mkLiteral "@urgent-background";
-      text-color = mkLiteral "@urgent-foreground";
+      text-color = mkLiteral foreground."500";
+      background-color = mkLiteral red."700";
     };
     "element normal.active" = {
-      background-color = mkLiteral "@active-background";
-      text-color = mkLiteral "@active-foreground";
+      text-color = mkLiteral foreground."300";
+      background-color = mkLiteral background."300";
     };
     "element selected.normal" = {
-      background-color = mkLiteral "@selected-normal-background";
-      text-color = mkLiteral "@selected-normal-foreground";
+      text-color = mkLiteral foreground."500";
+      background-color = mkLiteral background."100";
     };
     "element selected.urgent" = {
-      background-color = mkLiteral "@selected-urgent-background";
-      text-color = mkLiteral "@selected-urgent-foreground";
+      background-color = mkLiteral red."500";
+      text-color = mkLiteral foreground."300";
     };
     "element selected.active" = {
-      background-color = mkLiteral "@selected-active-background";
-      text-color = mkLiteral "@selected-active-foreground";
+      text-color = mkLiteral foreground."100";
+      background-color = mkLiteral background."100";
     };
     "element alternate.normal" = {
-      background-color = mkLiteral "@alternate-normal-background";
-      text-color = mkLiteral "@alternate-normal-foreground";
+      text-color = mkLiteral foreground."500";
+      background-color = mkLiteral background."500";
     };
     "element alternate.urgent" = {
-      background-color = mkLiteral "@alternate-urgent-background";
-      text-color = mkLiteral "@alternate-urgent-foreground";
+      background-color = mkLiteral orange."500";
+      text-color = mkLiteral foreground."300";
     };
     "element alternate.active" = {
-      background-color = mkLiteral "@alternate-active-background";
-      text-color = mkLiteral "@alternate-active-foreground";
+      text-color = mkLiteral foreground."700";
+      background-color = mkLiteral background."300";
     };
     "element-text" = {
       background-color = mkLiteral "transparent";
@@ -82,13 +56,13 @@ let
     };
     "element-icon" = {
       background-color = mkLiteral "transparent";
-      size = mkLiteral "1.0000em";
+      size = mkLiteral "1em";
       cursor = mkLiteral "inherit";
       text-color = mkLiteral "inherit";
     };
     "window" = {
       padding = mkLiteral "5";
-      background-color = mkLiteral "@background";
+      background-color = mkLiteral background."700";
       border = mkLiteral "1";
     };
     "mainbox" = {
@@ -97,16 +71,16 @@ let
     };
     "message" = {
       padding = mkLiteral "1px";
-      border-color = mkLiteral "@separatorcolor";
+      border-color = mkLiteral accent."500";
       border = mkLiteral "2px dash 0px 0px";
     };
     "textbox" = {
-      text-color = mkLiteral "@foreground";
+      text-color = mkLiteral foreground."700";
     };
     "listview" = {
       padding = mkLiteral "2px 0px 0px";
       scrollbar = mkLiteral "true";
-      border-color = mkLiteral "@separatorcolor";
+      border-color = mkLiteral accent."500";
       spacing = mkLiteral "2px";
       fixed-height = mkLiteral "0";
       border = mkLiteral "2px dash 0px 0px";
@@ -116,57 +90,48 @@ let
       padding = mkLiteral "0";
       handle-width = mkLiteral "8px";
       border = mkLiteral "0";
-      handle-color = mkLiteral "@normal-foreground";
+      handle-color = mkLiteral foreground."700";
     };
     "sidebar" = {
-      border-color = mkLiteral "@separatorcolor";
+      border-color = mkLiteral accent."500";
       border = mkLiteral "2px dash 0px 0px";
-    };
-    "button" = {
-      cursor = mkLiteral "pointer";
-      spacing = mkLiteral "0";
-      text-color = mkLiteral "@normal-foreground";
-    };
-    "button selected" = {
-      background-color = mkLiteral "@selected-normal-background";
-      text-color = mkLiteral "@selected-normal-foreground";
     };
     "num-filtered-rows" = {
       expand = mkLiteral "false";
-      text-color = mkLiteral "Gray";
+      text-color = mkLiteral foreground."100";
     };
     "num-rows" = {
       expand = mkLiteral "false";
-      text-color = mkLiteral "Gray";
+      text-color = mkLiteral foreground."100";
     };
     "textbox-num-sep" = {
       expand = mkLiteral "false";
       str = "/";
-      text-color = mkLiteral "Gray";
+      text-color = mkLiteral foreground."100";
     };
     inputbar = {
       padding = mkLiteral "1px";
       spacing = mkLiteral "0px";
-      text-color = mkLiteral "@normal-foreground";
+      text-color = mkLiteral foreground."100";
       children = mkLiteral "[ 'prompt','textbox-prompt-colon','entry','num-filtered-rows','textbox-num-sep','num-rows','case-indicator' ]";
     };
     case-indicator = {
       spacing = mkLiteral "0";
-      text-color = mkLiteral "@normal-foreground";
+      text-color = mkLiteral foreground."300";
     };
     entry = {
-      text-color = mkLiteral "@normal-foreground";
+      text-color = mkLiteral foreground."700";
       cursor = mkLiteral "text";
       spacing = mkLiteral "0";
-      placeholder-color = mkLiteral "Gray";
+      placeholder-color = mkLiteral foreground."100";
       placeholder = "Type to filter";
     };
     prompt = {
       spacing = mkLiteral "0";
-      text-color = mkLiteral "@normal-foreground";
+      text-color = mkLiteral foreground."700";
     };
     textbox-prompt-colon = {
-      margin = mkLiteral "0px 0.3000em 0.0000em 0.0000em";
+      margin = mkLiteral "0px 0.3em 0em 0em";
       expand = mkLiteral "false";
       str = ":";
       text-color = mkLiteral "inherit";

@@ -24,6 +24,8 @@
 
   fonts.packages = with pkgs; [
     fira-code
+    nerdfonts
+    font-awesome
   ];
 
   programs.hyprland.enable = true;

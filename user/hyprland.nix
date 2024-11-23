@@ -26,8 +26,8 @@ in {
         border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
-        "col.active_border" = "rgba(${removeHash colors.dark-gray}aa) rgba(${removeHash colors.foreground}bb) 45deg";
-        "col.inactive_border" = "rgba(${removeHash colors.dark-gray}bb)";
+        "col.active_border" = "rgba(${removeHash colors.gray."700"}aa) rgba(${removeHash colors.foreground."500"}bb) 45deg";
+        "col.inactive_border" = "rgba(${removeHash colors.gray."700"}bb)";
       };
 
       dwindle = {
@@ -42,7 +42,7 @@ in {
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(${removeHash colors.background}ee)";
+        "col.shadow" = "rgba(${removeHash colors.background."500"}ee)";
 
         blur = {
           enabled = true;
@@ -132,13 +132,12 @@ in {
     settings = {
       general = {
         disable_loading_bar = true;
-        # grace = 300;
         hide_cursor = true;
         no_fade_in = false;
       };
 
       background = {
-        path = "screenshot";
+        path = "${backgroundImage}";
         blur_passes = 3;
         blur_size = 2;
       };
@@ -149,13 +148,13 @@ in {
         dots_size = "0.25";
         dots_spacing = "0.55";
         dots_center = true;
-        outer_color = "rgba(${removeHash aliases.border}ee)";
-        inner_color = "rgba(${removeHash colors.background}ff)";
-        font_color =  "rgba(${removeHash colors.foreground}ff)";
+        outer_color = "rgba(${removeHash colors.gray."500"}ee)";
+        inner_color = "rgba(${removeHash colors.background."500"}ff)";
+        font_color =  "rgba(${removeHash colors.foreground."500"}ff)";
         fade_on_empty = false;
         hide_input = false;
-        check_color = "rgba(${removeHash aliases.accent}55)";
-        fail_color = "rgba(${removeHash colors.red}ff)";
+        check_color = "rgba(${removeHash colors.accent."500"}55)";
+        fail_color = "rgba(${removeHash colors.red."500"}ff)";
         fail_text = "$FAIL <b>($ATTEMPTS)</b>";
         fail_transition = 300;
         capslock_color = -1;
@@ -171,27 +170,27 @@ in {
       label = [
         {
           text = "cmd[update:1000] echo \"$(date +\"%A, %B %d\")\"";
-          color = "rgba(${removeHash colors.foreground}ff)";
+          color = "rgba(${removeHash colors.foreground."500"}ff)";
           font_size = 20;
-          font_family = "Iosevka Nerd Font Bold";
+          font_family = "UbuntuSans NFP";
           position = "0, 300";
           halign = "center";
           valign = "center";
         }
         {
           text = "cmd[update:1000] echo \"$(date +\"%k:%M\")\"";
-          color = "rgba(${removeHash colors.foreground}ff)";
+          color = "rgba(${removeHash colors.foreground."500"}ff)";
           font_size = 90;
-          font_family = "Iosevka Nerd Font Extrabold";
+          font_family = "UbuntuSans NFP SemiBold";
           position = "0, 350";
           halign = "center";
           valign = "center";
         }
         {
           text = "$USER";
-          color = "rgba(${removeHash colors.foreground}ff)";
+          color = "rgba(${removeHash colors.foreground."500"}ff)";
           font_size = 15;
-          font_family = "SF Pro Display Bold";
+          font_family = "UbuntuSans NFP SemiBold";
           position = "0, -300";
           halign = "center";
           valign = "center";

@@ -4,7 +4,7 @@
     ./shell.nix
     ./kitty.nix
     ./vscode.nix
-    ./waybar/waybar.nix
+    ./waybar.nix
     ./firefox.nix
     ./hyprland.nix
     ./git.nix
