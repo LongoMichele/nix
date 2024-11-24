@@ -81,11 +81,11 @@
         "nur": "nur"
       },
       "locked": {
-        "lastModified": 1730749708,
-        "narHash": "sha256-fbmyoDHB8Hxe3GG+y/Nf5QFaSmxDvi4ebrhBQ6jCzRQ=",
+        "lastModified": 1732397216,
+        "narHash": "sha256-FDekqUyQJEePz1yVjUIlYeHJeextV3aAGhjAaXNeYzs=",
         "owner": "adriankarlen",
         "repo": "textfox",
-        "rev": "6b3bd4a743c41daeec39bd9d0f96224018169658",
+        "rev": "f38c5d12876a69ee08a36dcfaa1b9a9b29579600",
         "type": "github"
       },
       "original": {
