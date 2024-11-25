@@ -15,6 +15,11 @@
       device = "nodev";
       useOSProber = true;
       efiSupport = true;
+      extraEntries = ''
+        menuentry "Firmware settings" {
+          fwsetup
+        }
+      '';
     };
 
     efi = {
@@ -100,6 +105,7 @@
     kitty
     brightnessctl
     alsa-utils
+    lf
   ];
 
   system.stateVersion = "24.05";
