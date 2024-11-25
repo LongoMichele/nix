@@ -50,12 +50,12 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [ ] Add bluetooth control packages and UI tool
   - 🔋 **Power Management**
     - [ ] Add battery management
-    - [ ] Add brightness and power management indicators to Waybar
+    - [x] Add brightness and power management indicators to Waybar
   - ⚙️ **Boot & User Accounts**
     - [x] Update bootloader configuration
     - [ ] Add second user and configure host
   - 🔒 **Security & Access**
-    - [ ] Polkit setup
+    - [x] Polkit setup
     - [x] Lock screen
 
 - 🎨 **Interface & Display**
@@ -69,7 +69,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Customize Firefox theme ([Textfox](https://github.com/adriankarlen/textfox))
     - [x] Update rofi theme
     - [x] Change from rofi theme file to config
-    - [ ] Customize Waybar
+    - [x] Customize Waybar
     - [x] Set system theme to dark
     - [x] Change cursor theme and add missing icons
 
