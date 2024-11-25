@@ -32,14 +32,14 @@
         tooltip-format = "<big>{:%B %d %Y}</big>\n<tt><small>{calendar}</small></tt>";
       };
       cpu = {
-        format = "{usage}% ";
+        format = "{usage}%  ";
         tooltip = false;
       };
       memory = {
-        format = "{}% ";
+        format = "{}%  ";
       };
       backlight = {
-        format = "{percent}% {icon}";
+        format = "{percent}%  {icon}";
         format-icons = [ "󰃞" "󰃟" "󰃠" ];
         tooltip = false;
       };
@@ -50,27 +50,27 @@
           critical = 15;
         };
         interval = 1;
-        format = "{capacity}% {icon}";
-        format-full = "{capacity}% {icon}";
-        format-charging = "{capacity}% ";
-        format-plugged = "{capacity}% ";
-        format-alt = "{time} {icon}";
+        format = "{capacity}%  {icon}";
+        format-full = "{capacity}%  {icon}";
+        format-charging = "{capacity}%  ";
+        format-plugged = "{capacity}%  ";
+        format-alt = "{time}  {icon}";
         format-icons = [ "" "" "" ];
         tooltip = false;
       };
       network = {
-        format-wifi = "{essid} ";
-        format-ethernet = "{ipaddr}/{cidr} ";
-        format-linked = "{ifname} (No IP) ";
-        format-disconnected = "Disconnected ";
+        format-wifi = "{essid}  ";
+        format-ethernet = "{ipaddr}/{cidr}  ";
+        format-linked = "{ifname} (No IP)  ";
+        format-disconnected = "Disconnected  ";
         format-alt = "{ifname}: {ipaddr}/{cidr}";
         tooltip-format = "Signal: {signalStrength}%";
       };
       pulseaudio = {
         scroll-step = 5;
-        format = "{volume}% {icon}";
-        format-bluetooth = "{volume}% {icon}";
-        format-bluetooth-muted = " {icon}";
+        format = "{volume}%  {icon}";
+        format-bluetooth = "{volume}%  {icon}";
+        format-bluetooth-muted = "  {icon}";
         format-muted = "{volume}% ";
         format-icons = {
           headphone = "";
