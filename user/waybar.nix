@@ -69,9 +69,9 @@
       pulseaudio = {
         scroll-step = 5;
         format = "{volume}%  {icon}";
-        format-bluetooth = "{volume}%  {icon}";
-        format-bluetooth-muted = "  {icon}";
-        format-muted = "{volume}% ";
+        format-bluetooth = "{volume}%  {icon} ";
+        format-bluetooth-muted = "{volume}%  {icon} ";
+        format-muted = "{volume}%  ";
         format-icons = {
           headphone = "";
           hands-free = "";

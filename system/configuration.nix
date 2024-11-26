@@ -33,6 +33,14 @@
     font-awesome
   ];
 
+
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
+  };
+
   programs.hyprland.enable = true;
   networking.hostName = systemSettings.hostname; 
   networking.networkmanager.enable = true;
@@ -62,6 +70,14 @@
         support32Bit = true;
       };
       pulse.enable = true;
+      wireplumber.extraConfig.bluetoothEnhancements = {
+        "monitor.bluez.properties" = {
+            "bluez5.enable-sbc-xq" = true;
+            "bluez5.enable-msbc" = true;
+            "bluez5.enable-hw-volume" = true;
+            "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
+        };
+      };
     };
 
     xserver = {
@@ -75,6 +91,8 @@
       enable = systemSettings.openssh.enable;
       ports = [ systemSettings.openssh.port ];
     };
+
+    blueman.enable = true;
   };
 
   environment.shells = with pkgs; [ bash zsh ];
