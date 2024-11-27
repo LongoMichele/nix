@@ -123,6 +123,7 @@
     kitty
     brightnessctl
     alsa-utils
+    pavucontrol
     lf
   ];
 
