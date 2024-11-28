@@ -10,6 +10,7 @@
     ./git.nix
     ./rofi.nix
     ./node.nix
+    ./mako.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

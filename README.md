@@ -48,7 +48,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Make sound work (including control keys)
     - [x] Add brightness controls
     - [x] Add bluetooth control packages and UI tool
-    - [ ] Add notification manager
+    - [x] Add notification manager
   - 🔋 **Power Management**
     - [ ] Add battery management
     - [x] Add brightness and power management indicators to Waybar
@@ -73,6 +73,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Customize Waybar
     - [x] Set system theme to dark
     - [x] Change cursor theme and add missing icons
+    - [ ] Create custom grub theme
 
 - 🛠️ **Developer Tools & Environment**
 
