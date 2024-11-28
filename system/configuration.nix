@@ -4,28 +4,9 @@
   imports = [
     ./hardware-configuration.nix
     ./virt-manager.nix
+    ./grub/grub.nix
     ./sddm/sddm.nix
   ];
-
-  boot.loader = {
-    systemd-boot.enable = false;
-
-    grub = {
-      enable = true;
-      device = "nodev";
-      useOSProber = true;
-      efiSupport = true;
-      extraEntries = ''
-        menuentry "Firmware settings" {
-          fwsetup
-        }
-      '';
-    };
-
-    efi = {
-      canTouchEfiVariables = true;
-    };
-  };
 
   fonts.packages = with pkgs; [
     fira-code
@@ -125,6 +106,7 @@
     alsa-utils
     pavucontrol
     lf
+    unzip
   ];
 
   system.stateVersion = "24.05";
