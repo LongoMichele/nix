@@ -48,6 +48,7 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Make sound work (including control keys)
     - [x] Add brightness controls
     - [x] Add bluetooth control packages and UI tool
+    - [ ] Add notification manager
   - 🔋 **Power Management**
     - [ ] Add battery management
     - [x] Add brightness and power management indicators to Waybar
