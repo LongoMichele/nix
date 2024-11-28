@@ -49,7 +49,13 @@ in {
         };
       };
 
-      windowrule = "noblur, ^(?!kitty$).*";
+      windowrulev2 = [
+        "float, class:(blueman)"
+        "float, title:^(Volume Control)$"
+      ];
+      windowrule = [
+        "noblur, ^(?!kitty$).*"
+      ];
 
       bezier = [  "myBezier, 0.05, 0.9, 0.1, 1.05"  ];
       animations = {
