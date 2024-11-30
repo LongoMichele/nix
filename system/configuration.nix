@@ -107,6 +107,8 @@
     pavucontrol
     lf
     unzip
+    tmux
+    neovim
   ];
 
   system.stateVersion = "24.05";
