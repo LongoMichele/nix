@@ -13,15 +13,15 @@
           fwsetup
         }
       '';
-      # theme = pkgs.stdenv.mkDerivation {
-      #   pname = "My Grub theme";
-      #   version = "0.1";
-      #   src = ./theme;
-      #   installPhase = ''
-      #     mkdir -p $out
-      #     cp -r * $out
-      #   '';
-      # };
+      theme = pkgs.stdenv.mkDerivation {
+        pname = "My Grub theme";
+        version = "0.1";
+        src = ./theme;
+        installPhase = ''
+          mkdir -p $out
+          cp -r * $out
+        '';
+      };
     };
 
     efi = {
