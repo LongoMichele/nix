@@ -1,8 +1,8 @@
-{ config, lib, pkgs, userSettings, ... }:
+{ config, lib, pkgs, user, ... }:
 {
   textfox = {
     enable = true;
-    profile = "${userSettings.username}";
+    profile = user.name;
   };
   programs.firefox = {
     enable = true;

@@ -12,45 +12,61 @@
 
   outputs = { self, nixpkgs, home-manager, textfox, ... }:
   let
-    systemSettings = {
-      hostname = "fly";
-      system = "x86_64-linux";
-      openssh = {
-        enable = false;
-        port = 22;
-      };
-    };
-    userSettings = rec {
-      username = "michele";
-      email = "michele.longo@domain.com";
-      description = "Michele Longo";
-      home = "/home/${username}";
-      hyprland = {
-        minWorkspaces = 5;
-      };
-    };
-    configurationRoot = "${userSettings.home}/nix";
     lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.${systemSettings.system};
-    theme = import ./theme.nix;
+    pkgs = nixpkgs.legacyPackages."x86_64-linux";
+    flakeRoot = toString ./.;
+    defaultUserConfig = {
+      fullName = "Michele Longo";
+      description = "Michele Longo";
+      email = "michele.longo@domain.com";
+      hyprland.minWorkspaces = 10;
+    };
+
+    users = [
+      (defaultUserConfig // {
+        name = "michele";
+        fullName = "Michele Longo";
+        description = "Michele Longo";
+        email = "michele.longo@domain.com";
+        hyprland.minWorkspaces = 5;
+      })
+    ];
+    findUser = name: lib.filter (u: u.name == name) users;
+    hosts = [
+      {
+        name = "fly";
+        system = "x86_64-linux";
+        users = lib.concatMap findUser [ "michele" "second" ];
+      }
+    ];
+    theme = import ./config/theme.nix {
+      inherit flakeRoot;
+    };
   in {
-    nixosConfigurations.${systemSettings.hostname} = lib.nixosSystem {
-      system = systemSettings.system;
-      modules = [ ./system/configuration.nix ];
-      specialArgs = {
-        inherit systemSettings;
-        inherit userSettings;
+    nixosConfigurations = builtins.listToAttrs (map (el: {
+      name = el.name;
+      value = lib.nixosSystem {
+        system = el.system;
+        modules = [ ./system/hosts/${el.name}/configuration.nix ];
+        specialArgs = {
+          host = el;
+        };
       };
-    };
-    homeConfigurations.${userSettings.username} = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      modules = [
-        ./user/home.nix
-        textfox.homeManagerModules.default
-      ];
-      extraSpecialArgs = {
-        inherit userSettings configurationRoot theme;
+    }) hosts);
+
+    homeConfigurations = builtins.listToAttrs (map (el: {
+      name = el.name;
+      value = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./home/users/${el.name}/home.nix
+          textfox.homeManagerModules.default
+        ];
+        extraSpecialArgs = {
+          inherit theme;
+          user = el;
+        };
       };
-    };
+    }) users);
   };
 }

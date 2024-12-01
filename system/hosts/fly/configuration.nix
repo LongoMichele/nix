@@ -1,11 +1,11 @@
-{ config, pkgs, systemSettings, userSettings, ... }:
+{ config, pkgs, host, ... }:
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   imports = [
-    ./hardware-configuration.nix
-    ./virt-manager.nix
-    ./grub/grub.nix
-    ./sddm/sddm.nix
+    ../../hardware-configuration.nix
+    ../../grub/grub.nix
+    ../../services/sddm/sddm.nix
+    ../../packages/virt-manager.nix
   ];
 
   fonts.packages = with pkgs; [
@@ -13,7 +13,6 @@
     nerdfonts
     font-awesome
   ];
-
 
   hardware = {
     bluetooth = {
@@ -23,7 +22,7 @@
   };
 
   programs.hyprland.enable = true;
-  networking.hostName = systemSettings.hostname; 
+  networking.hostName = host.name;
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Rome";
@@ -69,8 +68,8 @@
     };
 
     openssh = {
-      enable = systemSettings.openssh.enable;
-      ports = [ systemSettings.openssh.port ];
+      enable = true;
+      ports = [ 22 ];
     };
 
     blueman.enable = true;
@@ -89,12 +88,14 @@
     };
   };
 
-  users.users.${userSettings.username} = {
-    isNormalUser = true;
-    description = userSettings.description;
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
+  users.users = builtins.listToAttrs (map (el: {
+    name = el.name;
+    value = {
+      isNormalUser = true;
+      description = el.description;
+      extraGroups = [ "networkmanager" "wheel" ];
+    };
+  }) host.users);
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [

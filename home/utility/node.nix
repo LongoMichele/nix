@@ -1,6 +1,6 @@
-{ config, lib, pkgs, userSettings, ... }:
+{ config, lib, pkgs, user, ... }:
 let
-  npmGlobalDir = "${userSettings.home}/.npm-global";
+  npmGlobalDir = "/home/${user.name}/.npm-global";
 in {
   home = {
     packages = [ pkgs.nodejs_22 ];

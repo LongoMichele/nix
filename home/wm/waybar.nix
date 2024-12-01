@@ -1,4 +1,4 @@
-{ config, lib, pkgs, theme, userSettings, ... }:
+{ config, lib, pkgs, theme, user, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -18,7 +18,7 @@
       ];
       "hyprland/workspaces" = {
         persistent-workspaces = {
-          "*" = builtins.genList (i: i + 1) userSettings.hyprland.minWorkspaces;
+          "*" = builtins.genList (i: i + 1) user.hyprland.minWorkspaces;
         };
         show-special = true;
       };

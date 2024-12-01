@@ -1,5 +1,6 @@
+{ flakeRoot }:
 {
-  backgroundImage = "./assets/bg.jpg";
+  backgroundImage = "${flakeRoot}/assets/bg.jpg";
   colors = rec {
     background = {
       "900" = "#1C2025";

@@ -1,22 +1,22 @@
-{ config, lib, pkgs, userSettings, ... }:
+{ config, lib, pkgs,  user, ... }:
 {
   imports = [
-    ./shell.nix
-    ./kitty.nix
-    ./vscode.nix
-    ./waybar.nix
-    ./firefox.nix
-    ./hyprland.nix
-    ./git.nix
-    ./rofi.nix
-    ./node.nix
-    ./mako.nix
+    ../../utility/shell.nix
+    ../../utility/kitty.nix
+    ../../utility/git.nix
+    ../../utility/node.nix
+    ../../wm/waybar.nix
+    ../../wm/hyprland.nix
+    ../../wm/rofi.nix
+    ../../wm/mako.nix
+    ../../packages/vscode.nix
+    ../../packages/firefox.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
   home = {
-    username = userSettings.username;
-    homeDirectory = userSettings.home;
+    username = user.name;
+    homeDirectory = "/home/${user.name}";
     stateVersion = "24.05";
     packages = with pkgs; [
       google-chrome

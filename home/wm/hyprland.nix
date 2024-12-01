@@ -1,4 +1,4 @@
-{ config, lib, pkgs, userSettings, theme, ... }:
+{ config, lib, pkgs, user, theme, ... }:
 let
   removeHash = hex: lib.strings.removePrefix "#" hex;
 in {
@@ -113,7 +113,7 @@ in {
         builtins.concatLists (builtins.genList (i: [
           "$mod, ${toString (i + 1)}, workspace, ${toString (i + 1)}"
           "$mod SHIFT, ${toString (i + 1)}, movetoworkspace, ${toString (i + 1)}"
-        ]) userSettings.hyprland.minWorkspaces)
+        ]) user.hyprland.minWorkspaces)
       );
 
       bindel = [
