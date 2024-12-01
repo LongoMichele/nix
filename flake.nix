@@ -34,9 +34,9 @@
     findUser = name: lib.filter (u: u.name == name) users;
     hosts = [
       {
-        name = "fly";
+        name = "framework";
         system = "x86_64-linux";
-        users = lib.concatMap findUser [ "michele" "second" ];
+        users = lib.concatMap findUser [ "michele" ];
       }
     ];
     theme = import ./config/theme.nix {

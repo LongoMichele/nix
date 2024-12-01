@@ -21,6 +21,8 @@
     };
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   programs.hyprland.enable = true;
   networking.hostName = host.name;
   networking.networkmanager.enable = true;
@@ -39,7 +41,7 @@
     LC_TIME = "it_IT.UTF-8";
   };
 
-  console.keyMap = "it";
+  console.keyMap = "us";
 
   security.rtkit.enable = true;
   services = {
@@ -62,7 +64,7 @@
 
     xserver = {
       xkb = {
-        layout = "it";
+        layout = "us";
         variant = "";
       };
     };
