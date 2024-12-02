@@ -1,23 +1,13 @@
 { config, lib, pkgs,  user, ... }:
 {
   imports = [
-    ../../utility/shell.nix
-    ../../utility/kitty.nix
-    ../../utility/git.nix
+    ../../commons.nix
     ../../utility/node.nix
-    ../../wm/waybar.nix
     ../../wm/hyprland.nix
-    ../../wm/rofi.nix
-    ../../wm/mako.nix
     ../../packages/vscode.nix
     ../../packages/firefox.nix
   ];
-
-  nixpkgs.config.allowUnfree = true;
   home = {
-    username = user.name;
-    homeDirectory = "/home/${user.name}";
-    stateVersion = "24.05";
     packages = with pkgs; [
       google-chrome
     ];
@@ -70,6 +60,4 @@
       package = pkgs.libsForQt5.breeze-qt5;
     };
   };
-
-  programs.home-manager.enable = true;
 }

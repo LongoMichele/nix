@@ -2,6 +2,13 @@
 let
   removeHash = hex: lib.strings.removePrefix "#" hex;
 in {
+  imports = [
+    ./waybar.nix
+    ./rofi.nix
+    ./mako.nix
+    ../utility/kitty.nix
+  ];
+
   home = {
     packages = with pkgs; [
       swaybg
