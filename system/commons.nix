@@ -1,10 +1,20 @@
 { pkgs, host, ... }:
 {
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  imports = [
+    ./hardware-configuration.nix
+    ./grub/grub.nix
+    ./services/audio.nix
+    ./packages/shell.nix
+  ];
+
   fonts.packages = with pkgs; [
     fira-code
     nerdfonts
     font-awesome
   ];
+
+  security.rtkit.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -48,7 +58,6 @@
     vim
     wget
     git
-    kitty
     lf
     unzip
   ];

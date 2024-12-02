@@ -48,6 +48,8 @@
         fontFamily = "Fira Code";
         fontLigatures = true;
         formatOnSave = true;
+        tabSize = 2;
+        detectIndentation = true;
       };
 
       "[liquid]" = {
