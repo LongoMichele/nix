@@ -41,7 +41,7 @@
     LC_TIME = "it_IT.UTF-8";
   };
 
-  console.keyMap = "us";
+  console.keyMap = host.keyboardLayout;
 
   security.rtkit.enable = true;
   services = {
@@ -64,7 +64,7 @@
 
     xserver = {
       xkb = {
-        layout = "us";
+        layout = host.keyboardLayout;
         variant = "";
       };
     };

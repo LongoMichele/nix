@@ -71,7 +71,7 @@ in {
       };
 
       input = {
-        kb_layout = "it";
+        kb_layout = "us";
         numlock_by_default = true;
       };
 

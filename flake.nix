@@ -21,6 +21,11 @@
       email = "michele.longo@domain.com";
       hyprland.minWorkspaces = 10;
     };
+    defaultHostConfig = {
+      system = "x86_64-linux";
+      users = lib.concatMap findUser [ "michele" ];
+      keyboardLayout = "it";
+    };
 
     users = [
       (defaultUserConfig // {
@@ -33,11 +38,9 @@
     ];
     findUser = name: lib.filter (u: u.name == name) users;
     hosts = [
-      {
+      (defaultHostConfig // {
         name = "framework";
-        system = "x86_64-linux";
-        users = lib.concatMap findUser [ "michele" ];
-      }
+      })
     ];
     theme = import ./config/theme.nix {
       inherit flakeRoot;
