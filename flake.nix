@@ -66,7 +66,7 @@
           textfox.homeManagerModules.default
         ];
         extraSpecialArgs = {
-          inherit theme;
+          inherit theme flakeRoot;
           user = el;
         };
       };

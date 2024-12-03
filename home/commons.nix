@@ -2,7 +2,7 @@
 {
   imports = [
     ./utility/git.nix
-    ./utility/shell.nix
+    ./utility/shell/shell.nix
   ];
 
   home = {

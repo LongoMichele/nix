@@ -73,17 +73,17 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
     - [x] Customize Waybar
     - [x] Set system theme to dark
     - [x] Change cursor theme and add missing icons
-    - [ ] Create custom grub theme
+    - [x] Create custom grub theme
 
 - 🛠️ **Developer Tools & Environment**
 
   - 📝 **Editor & Shell**
     - [x] Complete VScode setup
-    - [ ] Add NeoVim
+    - [ ] Add NeoVim & tmux
     - [x] Add NodeJS
-    - [ ] Add powerlevel10k shell prompt theme
+    - [x] Add powerlevel10k shell prompt theme
   - 📦 **Optional Packages**
-    - [ ] Make installation of virt-manager optional
+    - [x] Make installation of virt-manager optional
     - [ ] Nvidia drivers (optional)
 
 - 🧩 **Configuration & Customization**
