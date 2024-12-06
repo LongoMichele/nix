@@ -12,6 +12,7 @@
     fira-code
     nerdfonts
     font-awesome
+    meslo-lgs-nf
   ];
 
   security.rtkit.enable = true;

@@ -5,6 +5,7 @@
     ../../services/sddm/sddm.nix
     ../../services/bluetooth.nix
     ../../packages/virt-manager.nix
+    ../../packages/tmux.nix
   ];
 
   programs.hyprland.enable = true;
@@ -18,7 +19,6 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
-    tmux
     neovim
   ];
 }

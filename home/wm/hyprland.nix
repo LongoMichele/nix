@@ -33,7 +33,7 @@ in {
         border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
-        "col.active_border" = "rgba(${removeHash colors.gray."700"}aa) rgba(${removeHash colors.foreground."500"}bb) 45deg";
+	"col.active_border" = "rgba(${removeHash colors.accent."500"}aa)";
         "col.inactive_border" = "rgba(${removeHash colors.gray."700"}bb)";
       };
 
@@ -96,7 +96,7 @@ in {
       };
 
       "$mod" = "SUPER";
-      "$terminal" = "kitty";
+      "$terminal" = "kitty -e tmux";
       "$lock" = "hyprlock";
       bind = [
         "CTRL, Space, exec, rofi -show drun"
@@ -183,7 +183,7 @@ in {
       label = [
         {
           text = "cmd[update:1000] echo \"$(date +\"%A, %B %d\")\"";
-          color = "rgba(${removeHash colors.foreground."500"}ff)";
+          color = "rgba(${removeHash colors.foreground."100"}ff)";
           font_size = 20;
           font_family = "UbuntuSans NFP";
           position = "0, 300";
@@ -192,7 +192,7 @@ in {
         }
         {
           text = "cmd[update:1000] echo \"$(date +\"%k:%M\")\"";
-          color = "rgba(${removeHash colors.foreground."500"}ff)";
+          color = "rgba(${removeHash colors.foreground."100"}ff)";
           font_size = 90;
           font_family = "UbuntuSans NFP SemiBold";
           position = "0, 350";
@@ -201,7 +201,7 @@ in {
         }
         {
           text = "$USER";
-          color = "rgba(${removeHash colors.foreground."500"}ff)";
+          color = "rgba(${removeHash colors.foreground."100"}ff)";
           font_size = 15;
           font_family = "UbuntuSans NFP SemiBold";
           position = "0, -300";
