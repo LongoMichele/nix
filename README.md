@@ -85,6 +85,8 @@ Since I tend to forget things, here’s a list of tasks. Some might seem trivial
   - 📦 **Optional Packages**
     - [x] Make installation of virt-manager optional
     - [ ] Nvidia drivers (optional)
+    - [ ] Screenshot tool ([hyprshot](https://github.com/Gustash/Hyprshot))
+    - [ ] Idle tool ([hypridle](https://github.com/hyprwm/hypridle))
 
 - 🧩 **Configuration & Customization**
   - 🏠 **Home Manager Customizations**

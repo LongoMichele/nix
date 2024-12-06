@@ -33,6 +33,8 @@
 
     userSettings = {
       "git.autofetch" = true;
+
+      terminal.integrated.fontFamily = "MesloLGS Nerd Font Mono";
    
       workbench = {
         iconTheme = "material-icon-theme";
