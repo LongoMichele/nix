@@ -33,7 +33,7 @@ in {
         border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
-	"col.active_border" = "rgba(${removeHash colors.accent."500"}aa)";
+	      "col.active_border" = "rgba(${removeHash colors.accent."500"}aa)";
         "col.inactive_border" = "rgba(${removeHash colors.gray."700"}bb)";
       };
 
@@ -59,6 +59,8 @@ in {
       windowrulev2 = [
         "float, class:(blueman)"
         "float, title:^(Volume Control)$"
+        "rounding 0, title:(is sharing a window.)$"
+        "bordersize 0, title:(is sharing a window.)$"
       ];
       windowrule = [
         "noblur, ^(?!kitty$).*"
@@ -78,7 +80,8 @@ in {
       };
 
       input = {
-        kb_layout = "us";
+        kb_layout = "us,it";
+        kb_options = compose:ralt;
         numlock_by_default = true;
       };
 

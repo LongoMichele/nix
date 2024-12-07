@@ -17,7 +17,10 @@
 
   security.rtkit.enable = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot = {
+    kernel.sysctl."kernel.sysrq" = 502;
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
 
   networking.hostName = host.name;
   networking.networkmanager.enable = true;
