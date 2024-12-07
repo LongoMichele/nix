@@ -12,6 +12,7 @@ in {
   home = {
     packages = with pkgs; [
       swaybg
+      hyprshot
     ];
   };
 
@@ -33,7 +34,7 @@ in {
         border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
-	      "col.active_border" = "rgba(${removeHash colors.accent."500"}aa)";
+        "col.active_border" = "rgba(${removeHash colors.accent."500"}aa)";
         "col.inactive_border" = "rgba(${removeHash colors.gray."700"}bb)";
       };
 
@@ -118,6 +119,7 @@ in {
 
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
+        "$mod, Print, exec, hyprshot -m window --clipboard-only"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i: [
