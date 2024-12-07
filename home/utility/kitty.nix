@@ -12,9 +12,9 @@
       underline_hyperlinks = "always";
       window_padding_width = "5";
       window_margin_width = "0";
-      foreground = foreground."300";
-      background = background."700";
-      background_opacity = "0.6";
+      foreground = foreground."700";
+      background = background."300";
+      background_opacity = "0.8";
       background_blur = "0";
       selection_foreground = background."500";
       selection_background = yellow."500";

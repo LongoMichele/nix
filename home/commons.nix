@@ -3,6 +3,7 @@
   imports = [
     ./utility/git.nix
     ./utility/shell/shell.nix
+    ./utility/neovim/neovim.nix
   ];
 
   home = {
@@ -12,6 +13,5 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
   programs.home-manager.enable = true;
 }
