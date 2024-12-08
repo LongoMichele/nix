@@ -10,9 +10,11 @@
 
   fonts.packages = with pkgs; [
     fira-code
-    nerdfonts
     font-awesome
     meslo-lgs-nf
+    nerd-fonts.ubuntu
+    nerd-fonts.ubuntu-mono
+    nerd-fonts.ubuntu-sans
   ];
 
   security.rtkit.enable = true;
@@ -66,5 +68,5 @@
     unzip
   ];
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 }
