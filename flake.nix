@@ -44,6 +44,9 @@
       (defaultHostConfig // {
         name = "vm";
       })
+      (defaultHostConfig // {
+        name = "tower";
+      })
     ];
     theme = import ./config/theme.nix {
       inherit flakeRoot;

@@ -33,6 +33,7 @@
 
     userSettings = {
       "git.autofetch" = true;
+      "diffEditor.ignoreTrimWhitespace" = false;
 
       terminal.integrated.fontFamily = "MesloLGS Nerd Font Mono";
    
