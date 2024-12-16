@@ -10,6 +10,10 @@
 
   programs.hyprland.enable = true;
 
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
+
   services = {
     openssh = {
       enable = true;

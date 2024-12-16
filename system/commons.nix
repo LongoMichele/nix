@@ -19,7 +19,6 @@
 
   boot = {
     kernel.sysctl."kernel.sysrq" = 502;
-    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking.hostName = host.name;

@@ -3,6 +3,7 @@
   imports = [
     ../../commons.nix
     ../../services/sddm/sddm.nix
+    ../../services/bluetooth.nix
     ../../packages/virt-manager.nix
     ../../packages/tmux.nix
     ../../packages/steam.nix
