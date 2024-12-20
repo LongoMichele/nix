@@ -64,6 +64,11 @@ in {
         plugin = nvim-lspconfig;
         config = toLuaFile ./plugins/lsp.lua;
       }
+
+      {
+        plugin = none-ls-nvim;
+        config = toLuaFile ./plugins/nonels.lua;
+      }
     ];
     extraPackages = with pkgs; [
       ripgrep
@@ -73,6 +78,9 @@ in {
       nil
       statix
       nixpkgs-fmt
+
+      # none-ls
+      stylua
     ];
   };
 }
