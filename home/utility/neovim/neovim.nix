@@ -50,13 +50,29 @@ in {
         plugin = neo-tree-nvim;
         config = toLuaFile ./plugins/neotree.lua;
       }
+      nvim-web-devicons
       {
         plugin = lualine-nvim;
         config = toLuaFile ./plugins/lualine.lua;
       }
+
+      neodev-nvim
+      nvim-cmp
+      cmp-nvim-lsp
+      telescope-ui-select-nvim
+      {
+        plugin = nvim-lspconfig;
+        config = toLuaFile ./plugins/lsp.lua;
+      }
     ];
     extraPackages = with pkgs; [
       ripgrep
+
+      # LSP
+      lua-language-server
+      nil
+      statix
+      nixpkgs-fmt
     ];
   };
 }
