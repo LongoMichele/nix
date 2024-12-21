@@ -1,4 +1,4 @@
-{ config, pkgs, host, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../commons.nix
@@ -21,8 +21,13 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    brightnessctl
-    neovim
-  ];
+  environment = {
+    sessionVariables.NIXOS_OZONE_WL = "1";
+
+    systemPackages = with pkgs; [
+      brightnessctl
+      neovim
+    ]; 
+  };
+
 }

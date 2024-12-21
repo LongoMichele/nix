@@ -1,4 +1,4 @@
-{ config, pkgs, host, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../commons.nix
@@ -17,7 +17,11 @@
     ports = [ 22 ];
   };
 
-  environment.systemPackages = with pkgs; [
-    neovim
-  ];
+  environment = {
+    sessionVariables.NIXOS_OZONE_WL = "1";
+
+    systemPackages = with pkgs; [
+      neovim
+    ];
+ };
 }

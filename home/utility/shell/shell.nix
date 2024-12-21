@@ -1,4 +1,4 @@
-{ config, lib, pkgs, flakeRoot, ... }:
+{ lib, pkgs, flakeRoot, ... }:
 let
   aliases = {
     # Utility
@@ -9,6 +9,7 @@ let
     cla = "clear && ls -oAFgh";
 
     # Git
+    gstatus = "git status";
     gstash = "git add . && git stash";
     gpull = "git pull";
     gcheck = "git checkout";
