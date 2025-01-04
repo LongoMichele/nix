@@ -81,6 +81,9 @@ in {
 
       # none-ls
       stylua
+      nodePackages.prettier
+      nodePackages.eslint
+      nodePackages.typescript-language-server
     ];
   };
 }
